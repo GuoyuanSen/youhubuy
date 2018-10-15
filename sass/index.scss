@@ -43,7 +43,12 @@ float: left;}
 .right{float: right;}   
 .right li{float: left;
         padding-right: 10px;
-        position: relative;}
+        position: relative;
+        // &:hover{
+        //     color: red;
+        // }
+    }
+
 .hi{vertical-align: top;}
 .right li a{color: #8e8e8e;}
 .tag-seprate{    width: 0;
@@ -52,4 +57,192 @@ float: left;}
             height: 14px;
             float: left;
             border-left: 1px solid #dcdcdc;}
-.myyoho:hover{background-color: #eaeceb}
+.myyoho span{color:#8e8e8e }
+.myyoho{
+    &:hover{background-color: #eaeceb;}
+}  
+// .right li:nth-of-type(4){
+//     &:hover .nav-drop-down{display: block}
+// }
+.nav-drop-down{top: 32px;
+        margin-left: 1px;
+        width: 88px;
+        position: absolute;
+        display: none;
+        background-color: #eaeceb;
+        z-index: 100;
+        li{
+            padding: 0;
+            position: relative;
+            width: 88px;
+            height: 33px;
+            border-top: 1px solid #c9c9c9;
+            box-sizing: border-box;
+            line-height: 33px;
+            text-align: center;}
+            a{
+                width: 88px;
+                height: 33px;
+                line-height: 33px;
+                box-sizing: border-box;}}
+.we-chat{ font-size: 12px;
+          color: #86bf4a;.huo{color: #86bf4a;position: relative;}.app-box{position: absolute;
+                    top: 12px;
+                    margin-left: -28px;
+                    width: 146px;
+                    padding: 20px 0 14px;display: none;}}      
+.phoneapp{
+    color: #d71d32;.phone{  color: #d71d32;}.box{
+        position: absolute;
+        top: 12px;
+        margin-left: -18px;
+        width: 146px;
+        padding: 20px 0 14px;display: none;}  
+    }
+                        
+.right li{
+            &:nth-child(6):hover .nav-drop-down{
+                display: block;
+            } 
+            &:nth-child(7):hover .app-box{
+                display: block;}
+            &:nth-child(8):hover .box{
+                    display: block;}  }
+           
+ #yoho-header .head-wrapper{width: 100%;
+    .center-content{width: 1150px;margin: 0 auto;}img{width: 175px;height: 55px;position: absolute;left: 47%;margin-top: 22px;}
+    .main-nav-list{       
+    vertical-align: top;
+    padding-top: 47px;
+    float: left;}li{float: left;
+        padding: 8px 22px 5px;
+        text-align: center;}
+    .cure {
+        color: #fff;
+        background-color: #3a3a3a;a{ color: #fff;font-size: 15px;}}}
+ .name-cn a{color:#000;font-size: 15px; }
+ .name-en a{color:#8e8e8e;font-size:15px; }       
+.search{float: right;
+        width: 378px;
+        padding-right: 18px;
+        margin-top: 40px;.search-s{width: 320px;
+            height: 28px;
+            box-sizing: border-box;
+            display: inline-block;}form{background-color: #3a3a3a;
+                border: 1px solid #3a3a3a;
+                overflow: hidden;}input{width: 240px;
+                    height: 28px;
+                    border: none;
+                    background: #fff;
+                    box-sizing: border-box;
+                    padding-left: 10px;}}       
+.search-s form .search-btn{    background: url(../img/pic10.jpg) no-repeat 50%;
+    width: 78px;
+    height: 28px;
+    float: right;
+    border: none;
+    cursor: pointer;}  
+.search-hot{width: 320px;
+            height: 27px;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: inline-block;zoom: 1;li{float: left;}span{display: inline-block;
+                font-size: 12px;
+                color: #b0b0b0;
+                margin-right: -35px;}}        
+.go-cart img{width: 30px;height: 30px;}  
+.go-cart{float: right;margin: -58px 232px 0 0;position: relative;} 
+.cart-wrapper{position: absolute;
+    top: 34px;
+    left: -230px;
+    width: 267px;
+    height: 322px;
+    z-index: 1000;
+    background: #f8f8f8;
+    display: none;}  
+.go-cart:hover .cart-wrapper {display: block}             
+
+#yoho-header .nav-wrapper{
+    height: 40px;
+    width: 100%;
+    position: relative;    background-color: #3a3a3a;.center-content{width: 1150px;margin: 0 auto;}.xian{line-height: 40px;
+        padding-right: 46px;
+        box-sizing: border-box;
+        margin-right: 36px;
+        // position: relative;
+        display: inline-block;}.xing{ color: #fff;
+            font-size: 14px;
+            line-height: 14px;
+            display: inline-block; }
+          
+}
+.sub li:hover .xing{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #fff;}
+.category-list:hover a{
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ccc;
+} 
+.third-wrapper{width:100%;
+            height: 410px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 41px;
+            display: none;
+            padding: 30px 0;
+            background-color: #f8f8f8;
+            z-index: 900;.center-content{width: 1150px;margin: 0 auto;}dl{
+                        float: left;
+            width: 278px;
+            height: 352px;
+            box-sizing: border-box;
+            border-left: 1px solid #ccc;
+            padding: 0 50px;
+            }dt{width: 180px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #000;
+                line-height: 18px;
+                margin-bottom: 20px;}dd{line-height: 14px;
+                    height: 14px;
+                    margin-bottom: 24px;}}
+
+.third-wrapper dl:first-child {
+    width: 228px;
+    border-left: 0;
+    padding-left: 0;
+}   
+.third-wrapper dl dd{
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 24px;a{color:#000;a{color: #a1a1a1}}
+}           
+.third-wrapper dl .hot{color: #d71d32}
+.sub li:nth-child(3):hover .third-wrapper{display: block;}
+.code-down{position: fixed;
+            top: 260px;
+            right: 20px;
+            width: 117px;
+            padding-top: 20px;
+            border: none;
+            background-color: transparent;
+            z-index: 990;
+            display: block;.code-img{background:url(../img/pic22.png)no-repeat;background-size: 100% 100%;
+                 width: 116px;
+                height: 116px;}.code-title{
+                    color: #000;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+                }
+            }
+.icon{
+    position: absolute;
+    top: 0;
+    right: -4px;
+    display: inline-block;
+    // font-size: 30px;
+    cursor: pointer;
+}
+       

@@ -77,6 +77,11 @@ gulp.task("script",() => {
     .pipe(uglify())
     .pipe(gulp.dest("dist/script"));
 })
+// gulp.task("script",()=>{
+//     return gulp.src("js/*.js")
+//     .pipe(gulp.dest("dist/js"))
+// })
+
 //压缩插件 gulp-uglify
 
 //编译 ES6=>ES5        gulp-babel插件
