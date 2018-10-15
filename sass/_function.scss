@@ -1,0 +1,4 @@
+$rootSize:18px;
+@function pxToRem($px){
+    @return $px / $rootSize * 1rem;
+};

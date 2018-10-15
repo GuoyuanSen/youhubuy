@@ -1,0 +1,15 @@
+@mixin transform($arguments){
+    -webkit-transform: $arguments;
+    -ms-transform: $arguments;
+    -o-transform: $arguments;
+    -moz-transform: $arguments;
+    transform: $arguments;
+}
+
+@mixin transition ($arguments:all .5s){
+    -webkit-transition: $arguments;
+    -ms-transition: $arguments;
+    -o-transition: $arguments;
+    -moz-transition: $arguments;
+    transition: $arguments;
+}
