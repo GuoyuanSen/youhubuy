@@ -1,41 +1,21 @@
-const gulp = require("gulp");//引用gulp
-const connect = require("gulp-connect");//引用http插件
-const concat = require("gulp-concat");//引用合并插件;
-const uglify = require("gulp-uglify");
-const babel = require('gulp-babel');
-const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require("gulp-sourcemaps");
-const sass = require("gulp-sass-china");
-gulp.task("hello",() => {
-    console.log("定义了一个hello任务");
-})
+// gulp 的插件;
 
-//配置index.html由开发环境转存到发布环境;
-// gulp.task("html",() => {
-//     //html是事件名,gulp.src;找到对应的源文件,源文件就是buffer数据
-//     return gulp.src("index.html").pipe(gulp.dest("dist/")).pipe(connect.reload());
-//     //nodejs的方法  pipe()方法;用来安置buffer数据
-//     //gulp.dest();//转存文件,如果文件夹存在,则表示进入文件夹,如果文件夹不存在,则表示创建并进入文件夹
+// 1. http插件; (服务器插件);
+// gulp connect;
+const gulp = require("gulp");
+// gulp 服务器插件;
+const connect = require("gulp-connect");
+// gulp 合并插件;
+ var concat = require('gulp-concat');
+// // gulp 压缩插件;
+ var uglify = require("gulp-uglify");
+// // babel 插件;
+ var babel = require("gulp-babel");
+// // css 插件;
+ var cleanCss = require("gulp-clean-css");
+// // sass 编译插件;
+ var sass = require("gulp-sass-china");
 
-// })
-//转存js的指令,取名为:script;
-// gulp.task("script",() => {
-//     // return gulp.src(["script/app/*.js","script/libs/*.js","script/module/*.js"]).pipe(gulp.dest("dist/script"));
-//     return gulp.src(["script/*/*.js"]).pipe(gulp.dest("dist/script"));//最多转存一级/   /** : 表示不论层级;
-// })
-//默认指令;     gulp +指令;
-// gulp.task("default",["html","script"]);
-
-//监测  gulp.watch; 
-//当文件发生改变,自动转存文件
-// gulp.task("watch",() => {
-//     //如果index.html发生了改变,转存就执行html指令;
-//     //如果js文件发生了改变,那么这个时候就执行script指令;
-//     //gulp.watch接收两个参数,参数1监测的文件;2.文件发生变化执行的指令;
-//     gulp.watch("index.html",["html"]);
-// })
-
-//=========================gulp的插件==================================
 //http插件;gulp-connect
 gulp.task("connect",function(){
     connect.server({
@@ -53,14 +33,22 @@ gulp.task("connect",function(){
     })
 });
 gulp.task("html",() => {
-    return gulp.src("*.html").pipe(gulp.dest("dist/"))
+    return gulp.src("*.html")
+    .pipe(gulp.dest("dist/"))
     .pipe(connect.reload());//自动更新
 })
+gulp.task("js", ()=>{
+    return gulp.src("js/*.js")
+    // .pipe(js().on("error",js.logError))
+    .pipe(gulp.dest("dist/js")).pipe(connect.reload());
+})
 gulp.task("watch", ()=>{
-    gulp.watch("*.html",["script","html","sass"]);
+    gulp.watch("*.html",["html","html"]);
     gulp.watch("sass/*.scss",["html","sass"]);
+    gulp.watch("css/*.css",["html","css"]);
     gulp.watch("script/*/*.js",["script","html","sass"]);
-    gulp.watch("img/*.*"["img","script","html","sass"])
+    gulp.watch("img/*.*"["img","html"])
+    // gulp.watch("js/*.js",["html","js"]);
 })
 //当发送更改时,自动加载当前文件;
 gulp.task("default",["watch","connect"]);
@@ -69,6 +57,20 @@ gulp.task("default",["watch","connect"]);
 gulp.task("img",() =>{
     return gulp.src(["img/*.png,img/*.jpg,img/*.gif"])
     .pipe(gulp.dest("dist/img"))
+})
+
+gulp.task("css", ()=>{
+    return gulp.src(["css/*.css"])
+           .pipe(cleanCss())
+           .pipe(gulp.dest("dist/css"))
+           .pipe(connect.reload());
+})
+
+//scss
+gulp.task("sass", () =>{
+    return gulp.src(["sass/*.scss"])
+           .pipe(sass().on("error",sass.logError))
+           .pipe(gulp.dest("dist/css"))
 })
 //script转存指令;
 gulp.task("script",() => {
@@ -91,14 +93,8 @@ gulp.task("es6",() => {
     .pipe(gulp.dest("dist/script"));
 })
 //压缩css
-gulp.task("css",() =>{
-    return gulp.src(["style/*.css"])
-    .pipe(Cleancss())
-    .pipe(gulp.dest("dist/css"))
-})
-//scss
-gulp.task("sass", () =>{
-    return gulp.src(["sass/*.scss"])
-           .pipe(sass().on("error",sass.logError))
-           .pipe(gulp.dest("dist/css"))
-})
+// gulp.task("css",() =>{
+//     return gulp.src(["css/*.css"])
+//     .pipe(Cleancss())
+//     .pipe(gulp.dest("dist/css"))
+// })

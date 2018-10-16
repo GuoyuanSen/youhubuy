@@ -159,12 +159,12 @@
   #yoho-header .head-wrapper .center-content {
     width: 1150px;
     margin: 0 auto; }
-  #yoho-header .head-wrapper img {
+  #yoho-header .head-wrapper .buy {
     width: 175px;
     height: 55px;
     position: absolute;
-    left: 47%;
-    margin-top: 22px; }
+    left: 44%;
+    margin-top: 37px; }
   #yoho-header .head-wrapper .main-nav-list {
     vertical-align: top;
     padding-top: 47px;
@@ -233,13 +233,17 @@
     color: #b0b0b0;
     margin-right: -35px; }
 
-.go-cart img {
+.go-cart {
+  width: 30px;
+  height: 30px; }
+
+.che {
   width: 30px;
   height: 30px; }
 
 .go-cart {
   float: right;
-  margin: -58px 232px 0 0;
+  margin: 38px -360px 0 0;
   position: relative; }
 
 .cart-wrapper {
