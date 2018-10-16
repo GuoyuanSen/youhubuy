@@ -366,3 +366,227 @@
     right: -4px;
     display: inline-block;
     cursor: pointer; }
+
+    .product-detail .brand-banner{
+        height: 45px;
+        width: 100%;
+        background: #000000 }
+    .center-content{
+        width: 1150px;margin: 0 auto;
+    }
+    .pull-left {
+        float: left;
+    }
+    .product-detail .brand-banner img {
+        display: block;
+        height: 45px;
+    }
+    .product-detail .brand-banner .pull-right {
+        margin-top: 5px;
+        float: right;
+    }
+    .product-detail .brand-banner .home {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .product-detail .brand-banner .brand-fav {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+    }
+    .product .brand-banner .fav-num {
+        font-size: 13px;
+        color: #fff;
+    }
+    .path-nav {
+        font-size: 12px;
+        padding: 15px 0;
+        height: 18px;
+        line-height: 18px;
+        color: #444;
+    }
+    .path-nav a {
+        color: #666;
+    }
+    .path-nav .iconfont {
+        font-size: 12px;
+    }
+    .product-detail .main {
+        width: 1150px;
+        min-height: 560px;
+    }
+    #small{
+      width: 420px;
+      height: 540px;
+      position: relative;
+      box-shadow: 0 0 5px #000;
+      float: left;
+      margin-top: 18px;
+    
+  }
+  #small img{width:420px;
+              height:540px}
+  #frame{
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 0 5px #000;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      display:none;
+      background-image: url(/img/shuai.png);
+      background-size: 420px 540px;
+background-repeat: no-repeat;
+  }   
+      #film{
+      width: 420px;
+      height:540px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index:999;
+      cursor: none;
+      }
+      #big{
+      width: 550px;
+      height: 530px;
+      overflow: hidden;
+      margin-left: 519px;
+      margin-top: 20px;
+      box-shadow: 0 0 5px #000;
+      /* margin-left: 100px; */
+      float: left;
+      position: absolute;
+      display: none;
+      }
+      #big img{
+      width: 1360px;
+      height: 1820px; 
+      position: absolute;
+      left: 0;
+      top: 0;
+      }  
+      .xiaotu{
+        position: absolute;
+        top: 273px;
+        right: 859px;}
+      .pull-right1{
+        float:left;
+      }
+      .pull-right1 .name{
+        font-size: 20px;
+      font-weight: 700;
+      line-height: 63px;
+      margin-left: 130px;
+      }
+      .pull-right1 .line{
+       height: 2px;
+       width: 604px;
+        border-bottom: 1px solid #eaeceb;
+        margin-left: 126px;}
+        .market-price{
+         margin-left: 125px;
+          height: 55px;
+        }
+        .price-row {
+          display: inline-block;
+          height:33px;
+          margin-top: 21px;
+      }
+      .product-detail .main .title {
+        color: #000;
+        font-size: 13px;
+        letter-spacing: 5px;
+        line-height: 20px;
+    }
+    .product-detail .main .price1 {
+      color: #000;
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 700;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .product-detail .main .desc {
+    display: inline-block;
+    margin-left: 20px;
+}
+    .product-detail .main .promotion {
+      display: inline-block;
+      color: #d0021b;
+      border: 1px solid #d0021b;
+      font-size: 12px;
+      padding: 2px 4px;
+      margin-right: 20px;
+    }
+    .row{
+      margin-left: 124px;
+      position: relative;
+      width: 100%;
+      margin-top: 30px;
+    }
+    .activity-title {
+      height: 22px;
+      position: absolute;
+      right: 106px;
+      top: 0;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 6;
+  }
+  .activity{
+    margin-left: 202px;
+    margin-top: -18px;
+}
+.activity li {
+  margin-bottom: 8px;
+}
+.product-detail .main .ac-type {
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  background: #b0b0b0;
+  color: #fff;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.pull-right1 .line1{
+  height: 120px;
+  width: 604px;
+   border-bottom: 1px solid #eaeceb;
+   margin-left: 126px;}
+   .market-price{
+    margin-left: 125px;
+     height: 55px;
+   }
+    
+
+  
+    
+  
+
+      
+            
+
+    

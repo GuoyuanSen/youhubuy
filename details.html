@@ -278,6 +278,182 @@
            });
          });  
          </script>
+         <div class="product-detail">
+             <div class="brand-banner">
+               <div class="center-content clearfix">
+                   <a class="pull-left" href="#">
+                       <img src="//img11.static.yhbimg.com/yhb-img01/2017/11/07/14/01679491a91a9900a0a0a12c461a8ddcf2.jpg?imageMogr2/thumbnail/45x45/extent/45x45/background/d2hpdGU=/position/center/quality/90">
+                   </a>
+               <div class="pull-right">
+                   <a class="home" href="#">
+                        <span class="iconfont icon-dingdan"></span> 
+                   </a> 
+                   <span id="brand-favour" class="brand-fav">
+                       <i class="iconfont icon-lovetaoxin"></i>
+                       <span class="fav-num">99999</span>
+                   </span>
+
+               </div>    
+               </div>  
+             </div>
+             <div class="center-content">
+                 <div class="path-nav">
+                     <a href="#">BOYS首页</a>
+                     <span class="iconfont"> > </span>
+                     <a href="#">服饰</a>
+                     <span class="iconfont"> > </span>
+                     <a href="#">手表</a>
+                     <span class="iconfont"> > </span>
+                     <a href="#">MLB WATCH 手表  灰色</a>
+                 </div>
+                <div class="main clearfix">
+                    <div id="small">
+                        <!-- 贴的膜 -->
+                        <div id="film"></div>
+                        <div id="frame">
+                            <!--一个框-->
+                        </div>
+                        <img src="./img/shuai.png" alt="">
+                    </div>
+                    <div id="big">
+                        <img src="./img/shuai.png" alt="">
+                    </div>
+
+                    <span>
+                        <img class="xiaotu" src="./img/xiao.png">
+                    </span>
+                    <div class="pull-right1">
+                        <h1 class="name">
+                            MLB WATCH 手表  灰色
+                        </h1>
+                        <div class="line"></div> 
+                        <p class="market-price">
+
+                        <span class="price-row">
+                            <span class="title">吊牌价：</span>
+                            <span class="price has-other-price">¥1388</span>
+                        </span>
+                        <br>
+                        <span class="promotion-price">
+                            <span class="title">促销价：</span>
+                            <span class="price1">¥259</span>
+                        </span>
+                        <span class="desc">
+                        <span class="promotion">1.9折</span>
+                        </span>
+                          </p> 
+                       <div class="row clearfix">
+                        <span class="title pull-left">促&nbsp;&nbsp;销： </span>
+                        <div class="activity-title"><span>展开全部促销</span> <i class="iconfont icon-xiajiantou"></i> </div>
+                       </div>
+                       <div class="pull-left">
+                        <ul class="activity">
+                                <li class="promotion-item ">
+                                    <span class="ac-type">折扣</span>
+                                    <span class="ac-des small">
+                                            <a target="_blank" href="#" rel="nofollow">新品下单8.8折</a>
+                                    </span>
+                                </li>
+                                <li class="promotion-item ">
+                                    <span class="ac-type">赠品</span>
+                                    <span class="ac-des small">
+                                            <a  href="#">【MLB WATCH】满¥399赠行李牌 赠完即止</a>
+                                    </span>
+                                </li>
+                                <li class="promotion-item ">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                            <span>全场¥9加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item hide">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                            <span>全场任意消费加10元换购YOHO!当期热销新刊</span>
+                                    </span>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="line1"></div>
+                      </div> 
+             </div>
+             
+            </div>
+                     
+                        
+                        
+                        
+                        
+                       
+                   
+
+                   
+                   
+           
+             
+      
+     
+        <!-- 放大镜 -->
+        <script>
+        var oSmall = document.getElementById("small")
+        var oSmallImg = oSmall.children[2];
+        // 小框;
+        var oFrame = document.getElementById("frame");
+        var oBig = document.getElementById("big");
+        var oBigImg = oBig.children[0];
+    
+        oSmall.onmouseenter = function(){
+            // 小框和大图都显示出来;
+            oBig.style.display = "block";
+            oFrame.style.display = "block";
+            oSmallImg.style.opacity = 0.3;
+        }
+        oSmall.onmouseleave = function(){
+            // 小框和大图都隐藏;
+            oBig.style.display = "none";
+            oFrame.style.display = "none";
+            oSmallImg.style.opacity = 1;
+        }
+        oSmall.onmousemove = function(event){
+            // 1. 获取定位的x,y 值;
+            var e = event || window.event;
+            var offsetX = e.offsetX;
+            var offsetY = e.offsetY;
+            // 2. 给元素设置的left 值 和top值;
+            var nLeft = offsetX  - 50;
+            var nTop = offsetY - 50;
+            // 边界检测;  最小值 ; 最大值;
+            
+            // 最小值;
+            nLeft = nLeft < 0 ? 0 : nLeft;
+            nTop = nTop < 0 ? 0 : nTop;
+    
+            // 最大值;
+            var maxLeft = oSmall.offsetWidth - oFrame.offsetWidth;
+            var maxTop = oSmall.offsetHeight - oFrame.offsetHeight;
+            
+            nLeft = nLeft > maxLeft ? maxLeft : nLeft;
+            nTop = nTop > maxTop ? maxTop : nTop;
+    
+            oFrame.style.left = nLeft +"px";
+            oFrame.style.top = nTop +  "px";
+    
+            // 边界检测;
+            
+            // 比例 已知 是4;
+            // 比例分成两部分;
+            var propX = oBig.offsetWidth / oFrame.offsetWidth;
+            var propY = oBig.offsetHeight / oFrame.offsetHeight;
+    
+            // console.log(propX,propY);
+            
+            oBigImg.style.left = -nLeft * propX + "px";
+            oBigImg.style.top = -nTop * propY + "px";
+    
+            oFrame.style.backgroundPosition = `${-nLeft}px ${-nTop}px`
+        }	
+            
+            </script>
     
 </body>
 </html>
