@@ -310,6 +310,8 @@
         <span><a href="#"><img src="./img/6.jpg"></a></span>
         <span><a href="#"><img src="./img/7.jpg"></a></span>
         <span><a href="#"><img src="./img/8.jpg"></a></span>
+        
+        
         </div>
    </div>
    <div class="singlehot clearfix">
@@ -1182,36 +1184,37 @@ document.getElementById("right");
 var aSpan =
 document.querySelectorAll("#btnlist span")
 var nowIndex = 0;
-oRight.onclick = function(){
-if(nowIndex == aItem.lenght -1){
-nowIndex = 0
-}else{
-nowIndex ++
-}
-animate()
-}
-oLeft.onclick = function(){
-if(nowIndex == 0){
-nowIndex = aItem.length-2;
-}else{
-nowIndex --
-}
-animate()
-}
-for(let i = 0 ; i <aSpan.length; i++){
-aSpan[i].onmouseover = function(){
-nowIndex = i;
-animate()
-}
-}
-function animate(){
-for(var i = 0 ; i <aItem.length ; i++){
-aItem[i].className = "";
-aSpan[i].className = "";
-}
-aItem[nowIndex].className="active";
-aSpan[nowIndex].className = "active";
-}
+        oRight.onclick = function(){
+            if(nowIndex == aItem.lenght -1){
+                nowIndex = 0
+            }else{
+                nowIndex ++
+            }
+         animate()
+       }
+       oLeft.onclick = function(){
+           if(nowIndex == 0){
+               nowIndex = aItem.length-1;
+           }else{
+               nowIndex --
+           }
+           animate()
+       }
+       for(let i = 0 ; i <aSpan.length; i++){
+           aSpan[i].onmouseover = function(){
+               nowIndex = i;
+               animate()
+           }
+       }
+       function animate(){
+           for(var i = 0 ; i <aItem.length ; i++){
+               aItem[i].className = "";
+               aSpan[i].className = "";
+           }
+           aItem[nowIndex].className="active";
+           aSpan[nowIndex].className = "active";
+       }
+
 
 // 2. 动画; css3 凑合;
 
