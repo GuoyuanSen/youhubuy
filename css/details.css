@@ -126,6 +126,7 @@
       color: #86bf4a;
       position: relative; }
     .we-chat .app-box {
+      z-index: 20;
       position: absolute;
       top: 12px;
       margin-left: -28px;
@@ -152,7 +153,7 @@
     display: block; }
   
   .right li:nth-child(8):hover .box {
-    display: block; }
+    display: block;z-index: 20; }
   
   #yoho-header .head-wrapper {
     width: 100%; }
@@ -744,26 +745,223 @@ a {
     margin-right: 175px;
     color: #999;
    font-size: 12px;
-    
-  }
-  .block-title {
-    margin-bottom: 30px;
-    margin-top: -16px;
+      
+    }
+    .block-title {
+      margin-bottom: 30px;
+      margin-top: -16px;
+      text-align: center;
+      }
+    .block-title .title-head {
+      border-left: 20px solid #fff;
+      border-right: 20px solid #fff;
+    }
+  .block-title .title-head .title.cur {
+    color: #444;
+    font-size: 16px;
+    border: 1px solid #444;
+    padding: 7px 34px 14px;
     text-align: center;
+    background-color: #fff;
+      }
+    .description-content {
+    overflow: hidden;
+    }
+     .basic {
+    width: 100%;
+    margin: -10px auto 0;
+    }
+     .basic li {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #444;
+    }
+    .basic li .value-space {
+      margin-left: 11px;
+  }
+  .goodsMessage1 {
+    margin-top: 54px;
+    
+    color: #999;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px;
 }
-.block-title .title-head {
-  border-left: 20px solid #fff;
-  border-right: 20px solid #fff;
+    .size-info {
+      text-align: center;
+    }
+    .size-table {
+      width: 100%;
+      font-size: 14px;
+      color: #666;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+       margin: 0 auto 20px;}
+       .size-table thead {
+        background-color: #f5f5f5;
+        color: #666;
+        font-size: 14px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .size-table tr {
+      text-align: center;
+      height: 30px;
+  }
+      th {
+        text-align: center;
+        font-weight: 400;
+        vertical-align: middle;
+    }
+    .size-tip {
+      color: #999;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+  }
+  .message{
+    margin-top: 54px;
+    margin-left: 175px;
+    margin-right: 175px;
+    color: #999;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px;
+  }
+  .details-html {
+    width: 750px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 22px;
+    color: #444;
 }
-.block-title .title-head .title.cur {
-  color: #444;
-  font-size: 16px;
-  border: 1px solid #444;
-  padding: 7px 34px 14px;
-  text-align: center;
-  background-color: #fff;
+.details-html p:nth-child(1){
+  color: #ff0000;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  .details-html img {
+    max-width: 100%;
+    margin-bottom: 10px;
 }
-
+  .comment-tabs {
+  border-bottom: 1px solid #444;
+  height: 35px;
+  }
+  .comment-tabs  h2.active {
+    float: left;
+    color: #000;
+    border-top: 2px solid #444;
+    border-right: 1px solid #444;
+    border-left: 1px solid #444;
+    background-color: #fff;
+}
+    .comment-tabs h2 {
+      color: #666;
+      height: 32px;
+      float: left;
+      padding: 4px 15px 2px;
+      line-height: 26px;
+      cursor: pointer;}
+     
+       .cc-content li {
+        border-bottom: 1px solid #eaeceb;
+        padding: 20px 0;
+        min-height: 150px;
+    }
+    .user-info {
+      margin-top: 23px;
+      color: #999;
+      line-height: 16px;
+      height: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .user-info .name {
+    float: left;
+    color: #444;
+    font-size: 14px;
+    margin-right: 20px;
+    }
+    .pull-right {
+      float: right;
+    color: #444;
+    font-size: 14px;
+     }
+     .comment{margin: 8px;color: #000}
+     .comment-list li {
+      border-bottom: 1px solid #eaeceb;
+      padding: 10px 0;
+      min-height: 150px;
+  }
+     .comment-star {
+      position: relative;
+      display: inline-block;
+      height: 13px;
+      width: 70px;
+      cursor: pointer;
+      background: url(/img/star.png) 0 -29px repeat-x;
+      vertical-align: top;
+    }
+  .star-5.active {
+    background: url(/img/star.png) repeat-x;
+     }
+     .cc-content dl dd {
+      margin: 0 20px 5px;
+  }
+  .cc-content .comment {
+    margin-bottom: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #444;
+    }
+    .img-thumb {
+      max-width: 70px;
+      max-height: 100px;
+      display: block;
+      width: 70px;
+      height: 100px;
+      border: 2px solid #fff;
+      margin-bottom: 10px;
+     }
+     .img-preview .img-detail {
+      padding: 5px 0 10px;
+      font-size: 13px;
+      display: none;
+     }
+     .cc-content dl {
+      line-height: 1.5;
+      color: #999;
+      margin-right: 20px;
+  }
+  .toolbar dd {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    }
+    .toolbar .iconfont {
+      font-size: 10px;
+      margin-right: 2px;
+    }
+    .img-detail .img-wrap {
+      max-width: 345px;
+      max-height: 345px;
+      overflow: hidden;
+    }
+     .img-detail .img-wrap img {
+      max-width: 345px;
+      max-height: 345px;
+      vertical-align: top;
+  }
+  .comment-date {
+    font-size: 14px;
+    color: #b0b0b0;
+    line-height: 34px;
+    }
   
     
   

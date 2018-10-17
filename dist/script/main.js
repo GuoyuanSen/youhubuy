@@ -1,1 +1,0 @@
-for(var oA=document.querySelectorAll("a"),i=0;i<=oA.length-1;i++)oA[i].href="javascript:;";

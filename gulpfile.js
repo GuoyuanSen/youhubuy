@@ -44,9 +44,10 @@ gulp.task("js", ()=>{
 })
 gulp.task("watch", ()=>{
     gulp.watch("*.html",["html","html"]);
+    gulp.watch("js/*.js",["html","js"]);
     gulp.watch("sass/*.scss",["html","sass"]);
     gulp.watch("css/*.css",["html","css"]);
-    gulp.watch("script/*/*.js",["script","html","sass"]);
+  
     gulp.watch("img/*.*"["img","html"])
     // gulp.watch("js/*.js",["html","js"]);
 })
@@ -75,8 +76,8 @@ gulp.task("sass", () =>{
 //script转存指令;
 gulp.task("script",() => {
     return gulp.src(["script/app/*.js","script/module/*.js","script/libs/*.js","!script/libs/jquery.js"])//!*script.js;除了script.js文件
-    .pipe(concat("main.js"))
-    .pipe(uglify())
+    // .pipe(concat("main.js"))
+    // .pipe(uglify())
     .pipe(gulp.dest("dist/script"));
 })
 // gulp.task("script",()=>{
