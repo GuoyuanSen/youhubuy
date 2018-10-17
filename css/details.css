@@ -631,7 +631,138 @@ a {
   width: 606px;
    border-bottom: 1px solid #eaeceb;
   }
+  .product-detail .main .buy-btn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 46px;
+    line-height: 46px;
+    width: 180px;
+    text-align: center;
+    /* color: #fff; */
+    background:#eb3b19;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
   
+}
+.buy-btn:hover{opacity: 0.8;}
+.product-detail .main .buy-btn a{
+  color: #fff;
+}
+.product-detail .main .collect-product .iconfont{
+  margin-right: 5px;
+  color: #ccc;
+  font-size: 20px;
+}
+.product-detail .main .collect-product {
+  margin-right: 10px;
+  height: 46px;
+  line-height:38px;
+  width: 144px;
+  text-align: center;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+}
+.code-buy{
+
+   
+    width: 180px;
+    height: 92px;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+   
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+.product-detail .main .share-row span {
+  margin-top: -57px;
+  height: 16px;
+}
+.share-row .weibo {
+  background: url(/img/sprite.scss.png);
+  background-size: 123px 122px;
+  width: 16px;
+  height: 16px;
+}
+.share-wrapper .weibo {
+  background-position: -48px -62px;
+  margin-left: 61px;
+}
+.share-wrapper i {
+  display: block;
+  float: left;
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.share-wrapper .weixin {
+  background-image: url(/img/sprite.scss.png);
+  background-position: 0 -62px;
+  background-size: 123px 122px;
+}
+.share-wrapper .qzone {
+  background-position: -24px -38px;
+}
+.share-wrapper .qzone {
+  background-image: url(/img/sprite.scss.png);
+  background-size: 123px 122px;
+}
+.share-wrapper .qq {
+  background-image: url(/img/sprite.scss.png);
+  background-size: 123px 122px;
+}
+
+.share-wrapper .qq {
+  background-position: 0 -38px;}
+
+
+/* 商品详情 */
+  .total-content{
+    position:relative;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-top: 30px;
+    overflow: hidden
+  }
+  .other-infos{
+    padding-bottom: 30px;
+    width: 1150px;
+    float: left;
+  }
+  .goodsMessage{
+    margin-top: 35px;
+    margin-left: 175px;
+    margin-right: 175px;
+    color: #999;
+   font-size: 12px;
+    
+  }
+  .block-title {
+    margin-bottom: 30px;
+    margin-top: -16px;
+    text-align: center;
+}
+.block-title .title-head {
+  border-left: 20px solid #fff;
+  border-right: 20px solid #fff;
+}
+.block-title .title-head .title.cur {
+  color: #444;
+  font-size: 16px;
+  border: 1px solid #444;
+  padding: 7px 34px 14px;
+  text-align: center;
+  background-color: #fff;
+}
 
   
     
