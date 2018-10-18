@@ -47,7 +47,7 @@ gulp.task("watch", ()=>{
     gulp.watch("js/*.js",["html","js"]);
     gulp.watch("sass/*.scss",["html","sass"]);
     gulp.watch("css/*.css",["html","css"]);
-  
+    gulp.watch("php/**",["html","css","js","img","php","icon"]);
     gulp.watch("img/*.*"["img","html"])
     // gulp.watch("js/*.js",["html","js"]);
 })
@@ -56,8 +56,8 @@ gulp.task("default",["watch","connect"]);
 //合并插件  gulp-concat
 //images
 gulp.task("img",() =>{
-    return gulp.src(["img/*.png,img/*.jpg,img/*.gif"])
-    .pipe(gulp.dest("dist/img"))
+    return gulp.src("img/*")
+    .pipe(gulp.dest("dist/img")).pipe(connect.reload());;
 })
 
 gulp.task("css", ()=>{
@@ -67,12 +67,23 @@ gulp.task("css", ()=>{
            .pipe(connect.reload());
 })
 
+gulp.task("php", ()=>{
+    return gulp.src(["php/**"]).pipe(gulp.dest("dist/php")).pipe(connect.reload());;
+})
 //scss
 gulp.task("sass", () =>{
     return gulp.src(["sass/*.scss"])
            .pipe(sass().on("error",sass.logError))
            .pipe(gulp.dest("dist/css"))
 })
+
+gulp.task("icon",()=>{
+    return gulp.src(["iconfonnt/**"])   
+    .pipe(
+        gulp.dest("dist/iconfont/")
+    )
+})
+
 //script转存指令;
 gulp.task("script",() => {
     return gulp.src(["script/app/*.js","script/module/*.js","script/libs/*.js","!script/libs/jquery.js"])//!*script.js;除了script.js文件
@@ -93,9 +104,4 @@ gulp.task("es6",() => {
     .pipe(babel())
     .pipe(gulp.dest("dist/script"));
 })
-//压缩css
-// gulp.task("css",() =>{
-//     return gulp.src(["css/*.css"])
-//     .pipe(Cleancss())
-//     .pipe(gulp.dest("dist/css"))
-// })
+
