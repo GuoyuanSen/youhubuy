@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>yohubuy登陆</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-    
-</body>
-</html>
+        
+        <body>
+                <header>
+                    <a href="##">
+                        <img src="https://static.yohobuy.com/newheader/img/logo_e.png?imageView2/2/interlace/1/q/75" alt=""/>
+
+                    </a>
+                </header>
+                <section>
+                    <div class="log">
+                        <div class="log-b">
+                            <form>
+                                <div class="log-b-top clearfix">
+                                    <span>会员登录</span>
+                                    <em>|</em>
+                                    <span>扫码登录</span>
+                                </div>
+                                <div class="log-b-middle">
+                                    <p><input id="phone" type="text" placeholder="手机号码" />
+                                    <span id="act" class="active">请填写正确手机号码</span>
+                                    </p>
+                                    <p>
+                                        <input id="txt" type="text" placeholder="短信验证码" />
+                                        <i id="btny">获取验证码</i>
+                                    </p>
+                                    <p><button id="btn">立即登录</button></p>
+                                    <p><a href="#">免费注册</a></p>
+                                </div>
+                                 <div class="log-b-bottom clearfix">
+                                    <span id="pwd">账号密码</span>
+                                    <em>|</em>
+                                    <span>社交登录</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+               
+            
+    <script src="./script/libs/jquery.js"></script>
+    <script>
+        var oInp1=document.getElementById("phone");
+       
+        var oInp2=document.getElementById("code1");
+        
+        var oInp3=document.getElementById("code2");
+        
+        var oInp4=document.getElementById("txt");
+   
+        var oBtn=document.getElementById("btn");
+        
+        oBtn.onclick=function(){
+            $.ajax({
+            url:"http://localhost:8888/proxy/localhost/1815php/JD/js/login.php",
+            type:"GET",
+            data:`username=${oInp1.value}&password=${oInp4.value}`,
+            datatype:"html",
+            success:function(res){
+                alert(res)
+            }
+        })
+
+        }
+    </script>
+            </body>
+            </html>
+            
