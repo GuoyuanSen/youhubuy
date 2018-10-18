@@ -9,70 +9,74 @@
     <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
+    <header>
+        <img class="head" src="https://static.yohobuy.com/newheader/img/logo_e.png?imageView2/2/interlace/1/q/75" alt="">
+        <a class="first" href="#">首页</a>
+        <a class="help" href="#">帮助中心</a>
+    </header>
+    <section class="clearfix">
+        <div class="zuo">
+            <img src="https://img10.static.yhbimg.com/yhb-img01/2018/10/15/17/015bd7a3970e4a724ba4cb4c5d7d7e9289.jpg?imageView2/2/w/252/h/190/q/90" alt="">
+        </div>
+        <div class="you">
+            <h2>Hi，欢迎登录！</h2>
+            <p class="hai">还不是宝贝网会员？</p>
+            <a href="http://localhost:8888/register.html">免费注册</a>
+            <input id="username" type="text" placeholder="用户名/手机号码/电子邮箱">
+            <!-- <img class="name" src="images/logo_03.jpg" alt=""> -->
+            <input id="password" type="text" placeholder="登录密码">
+            <!-- <img class="key" src="images/logo_07.jpg" alt=""> -->
+            <p class="forget">忘记密码？</p>
+            <p class="two">两周内免登录</p>
+            <button id="btn">登录</button>
+            <p class="friend">使用合作伙伴账号登录：</p>
+            <div class="qq">
+                
+                <p class="qq2">QQ账号登录</p>
+            </div>
+        </div>
+    </section>
+  <div class="guanyu">
+    <ul>
+        <li>关于我们</li>
+        <li>商务合作</li>
+        <li>广告服务</li>
+        <li>用户协议</li>
+        <li>帮助中心</li>
+        <li>诚聘英才</li>
+    </ul>
+</div>
+    <p class="ban">
+        NewPower Co. 版权所有 经营许可证编号：苏B2-20120395
+    
         
-        <body>
-                <header>
-                    <a href="##">
-                        <img src="https://static.yohobuy.com/newheader/img/logo_e.png?imageView2/2/interlace/1/q/75" alt=""/>
-
-                    </a>
-                </header>
-                <section>
-                    <div class="log">
-                        <div class="log-b">
-                            <form>
-                                <div class="log-b-top clearfix">
-                                    <span>会员登录</span>
-                                    <em>|</em>
-                                    <span>扫码登录</span>
-                                </div>
-                                <div class="log-b-middle">
-                                    <p><input id="phone" type="text" placeholder="手机号码" />
-                                    <span id="act" class="active">请填写正确手机号码</span>
-                                    </p>
-                                    <p>
-                                        <input id="txt" type="text" placeholder="短信验证码" />
-                                        <i id="btny">获取验证码</i>
-                                    </p>
-                                    <p><button id="btn">立即登录</button></p>
-                                    <p><a href="#">免费注册</a></p>
-                                </div>
-                                 <div class="log-b-bottom clearfix">
-                                    <span id="pwd">账号密码</span>
-                                    <em>|</em>
-                                    <span>社交登录</span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
+    </p>
+    
+     
+       
                
             
     <script src="./script/libs/jquery.js"></script>
     <script>
-        var oInp1=document.getElementById("phone");
+       var oBtn=document.getElementById("btn");
+        var oUser=document.getElementById("username");
+        var oPwd=document.getElementById("password");
        
-        var oInp2=document.getElementById("code1");
-        
-        var oInp3=document.getElementById("code2");
-        
-        var oInp4=document.getElementById("txt");
-   
-        var oBtn=document.getElementById("btn");
-        
         oBtn.onclick=function(){
             $.ajax({
-            url:"http://localhost:8888/proxy/localhost/1815php/JD/js/login.php",
-            type:"GET",
-            data:`username=${oInp1.value}&password=${oInp4.value}`,
-            datatype:"html",
-            success:function(res){
-                alert(res)
-            }
-        })
+                url:"http://localhost:8888/proxy/localhost/1815php/JD/js/login.php",
+                type:"GET",
+                data:`username=${oUser.value}&password=${oPwd.value}}`,
+                datatype:"html",
+                success:function(res){
+                    alert(res)
+                    console.log(res)
+                }
+            })
 
         }
+
     </script>
-            </body>
-            </html>
-            
+    </body>
+    </html>
+    

@@ -9,103 +9,129 @@
     <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-    <!-- 头部 -->
-    <div class="header clearfix">
-        <div class="header-little clearfix">
-            <img src="https://static.yohobuy.com/newheader/img/logo_e.png?imageView2/2/interlace/1/q/75" alt="" class="header-img">
-            <span class="header-span">会员注册</span>
-            <a href="index.html" class="header-a">返回首页</a>
-        </div>
-    </div>
-    <!-- 内容区 -->
-    <div class="box">
-        <div class="register">
-            <div class="new_user">新用户注册</div>
-            <div class="phone">
-                <img src="./img/phone" alt="" class="phone-img">
-                <input type="text" placeholder="手机号码：" class="phone-num" id="phone">
-            </div>
-            <div class="code clearfix">
-                <div class="code-left">
-                    <!-- <img src="./img/pwd.png "alt="" class="code-img" > -->
-                    <input type="text" placeholder="图形码：" class="code-num" id="code1">
-                </div>
-                <div class="code-right">
-                    <img src="./img/register1.jpg" alt="" class="code-img2">
-                </div>
+    <header>
+        <img class="head" src="https://static.yohobuy.com/newheader/img/logo_e.png?imageView2/2/interlace/1/q/75" alt="">
+        <a class="first" href="http://localhost:8888/yohobuy.html">首页</a>
+        <a class="help" href="#">帮助中心</a>
+    </header>
+    <section>
+        <div class="zuo">
+            <div class="geren">
+                <img class="people" src="https://img11.static.yhbimg.com/yhb-img01/2018/10/15/17/01296998f78537a83698ccc38341b0a6d6.jpg?imageView2/2/w/252/h/190/q/90" alt="">
                 
             </div>
-            <div class="code clearfix">
-                <div class="code-left">
-                    <!-- <img src="./img/pwd.png" alt="" class="code-img"> -->
-                    <input type="text" placeholder="验证码：" class="code-num" id="code2">
-                </div>
-                <div class="code-right code-right2">
-                    <a href="#" class="code-a">获取手机验证码</a>
-                </div>
-                
-            </div>
-            <div class="phone">
-                <img src="./img/lock.png" alt="" class="lock-img">
-                <input type="text" placeholder="密码：6-20个字符，字母，数字和符号组合" class="lock-num" id="pwd">
-            </div>
-            <div class="btn" id="btn">
-                <a href="#" class="code-a">同意协议并注册</a>
-            </div>
-            <div class="go">
-                <p class="go-p1">
-                    <span class="go-span">已有账号，</span>
-                    <a href="#" class="go-a">去登录</a>
+            
+        </div>
+        <div class="you">
+            <img class="logo" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1539846070&di=b71ac17ca2fc62fb9677f00d000d3f30&src=http://ww1.sinaimg.cn/large/4b42536fjw1ez7h9sudkfj20gg088myv.jpg" alt="">
+            <form action="#">
+                <p>
+                    <b>用户名：</b><input type="text" id="username">
+                    <span>4-20个字符，1个汉字为2个字符。推荐使用中文用户名。</span>
                 </p>
-                <p class="go-p2">
-                    <a href="#" class="go-a">《聚橙网服务协议》</a>
+                <p>
+                    <b>手机号码：</b><input type="text" id="mobile">
+                    <span>4-20个字符，1个汉字为2个字符。推荐使用中文用户名。</span>
                 </p>
-            </div>
+                <p>
+                    <b>电子邮箱：</b><input type="text" id="email">
+                    <span>请填写邮箱，推荐使用新浪、QQ邮箱</span>
+                </p>
+                <p>
+                    <b>密码：</b><input type="password" id="password">
+                    <span>密码为6-20个字符，请使用字母加数字或下划线组合密码。</span>
+                </p>
+                <p>
+                    <b>确认密码：</b><input type="password" id="passWordAgain">
+                    <span>请再次输入密码，两次输入必须一致</span>
+                </p>
+            </form>
+            <p id="p1">我已看过并接受<a href="#">《宝贝网用户注册协议》</a></p>
+            <a href="#"><button id="btn">立即注册</button></p>            
         </div>
-    </div>
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer-down">
-            <a href="#" class="footer-span-a ">关于我们</a>
-            <a href="#" class="footer-span-a footer-span-ab">联系我们</a>
-            <a href="#" class="footer-span-a ">加入我们</a>
-            <a href="#" class="footer-span-a footer-span-ab">服务条款</a>
-            <a href="#" class="footer-span-a ">媒体报道</a>
-            <a href="#" class="footer-span-a footer-span-ab">合作伙伴</a>
-            <a href="#" class="footer-span-a ">友情链接</a>
-            <a href="#" class="footer-span-a footer-span-ab footer-span-ablast">网站地图</a>
-        </div>
-        <div class="footer-down2">
-            <span class="footer-down2-span">
-                    CopyRight © 2007-2018 南京新与力文化传播有限公司
-                    </span>
-            <i class="footer-down2-i"></i>
-            <span class="footer-down2-span">苏ICP备09011225号</span>
-        </div>
-    </div>
+    </section>
+    <div class="guanyu">
+    <ul>
+        <li>关于我们</li>
+        <li>商务合作</li>
+        <li>广告服务</li>
+        <li>用户协议</li>
+        <li>帮助中心</li>
+        <li>诚聘英才</li>
+    </ul>
+</div>
+    <p class="ban">
+        NewPower Co. 版权所有 经营许可证编号：苏B2-20120395
+    
+        
+    </p>
+    
 
     <script src="./script/libs/jquery.js"></script>
     <script>
-        var oInp1=document.getElementById("phone");
-        
-        var oInp2=document.getElementById("code1");
-        
-        var oInp3=document.getElementById("code2");
-        
-        var oInp4=document.getElementById("pwd");
-        
+        var aSpan = document.querySelectorAll("span");
+        username.onblur = function(){
+            var reg =/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+            if(reg.test(username.value) != true){
+                aSpan[0].style.color = "red";
+            }else{
+                aSpan[0].style.color = "green";
+            }
+        }
+        mobile.onblur = function(){
+            var reg = /^(156|158|188)[0-9]{8}$/
+            if(reg.test(mobile.value)){
+                aSpan[1].style.color = "green";
+            }else{
+                aSpan[1].style.color = "red";
+                aSpan[1].innerHTML = "请填写正确的手机号码"
+            }
+        }
+        email.onblur = function(){
+            var reg = /^[1-9a-z][0-9a-z]{5,19}@(126|163|qq)(.com|.cn)$/;
+            if(reg.test(email.value)){
+                aSpan[2].style.color = "green";
+            }else{
+                aSpan[2].style.color = "red";
+                aSpan[2].innerHTML = "请填写正确的邮箱地址"
+            } 
+        }
+        password.onblur = function(){
+            var reg = /[a-zA-Z\d_]{6,18}/;
+            if(reg.test(password.value)){
+                aSpan[3].style.color = "green";
+            }else{
+                aSpan[3].style.color = "red";
+                aSpan[3].innerHTML = "密码不能为纯字母"
+            }
+        }
+        passWordAgain.onblur = function(){
+            if(passWordAgain.value == password.value){
+                aSpan[4].style.color = "green";
+            }else{
+                aSpan[4].style.color = "red";
+                aSpan[4].innerHTML = "两次密码输入不一致"
+            }
+        }
+
+        var oInp1=document.getElementById("username");
+        var oInp2=document.getElementById("mobile");
+        var oInp3=document.getElementById("email");
+        var oInp4=document.getElementById("password");
+        var oInp5=document.getElementById("passWordAgain");
         var oBtn=document.getElementById("btn");
         
         oBtn.onclick=function(){
             $.ajax({
-            url:"http://localhost:8888/proxy/localhost/1815php/JD/js/register1.php",
-            type:"GET",
-            data:`username=${oInp1.value}&password=${oInp4.value}`,
-            datatype:"html",
-            success:function(res){
-                alert(res)
-            }
-        })
+                url:"http://localhost:8888/proxy/localhost/1815php/JD/js/register1.php",
+                type:"GET",
+                data:`username=${oInp1.value}&mobile=${oInp2.value}&email=${oInp3.value}&password=${oInp4.value}&passWordAgain=${oInp5.value}}`,
+                datatype:"html",
+                success:function(res){
+                    alert(res)
+                    console.log(res)
+                }
+            })
 
         }
     </script>

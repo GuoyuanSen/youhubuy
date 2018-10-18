@@ -91,6 +91,7 @@
   border-left: 1px solid #dcdcdc; }
 
 .myyoho span {
+  height:13px;
   color: #8e8e8e; }
 
 .myyoho:hover {
@@ -143,7 +144,8 @@
     margin-left: -18px;
     width: 146px;
     padding: 20px 0 14px;
-    display: none; }
+    display: none; 
+  z-index: 33;}
 
 .right li:nth-child(6):hover .nav-drop-down {
   display: block; }
@@ -619,6 +621,7 @@ a {
   opacity: 0.7; }
 
 .footer {
+  width: 100%;
   font-size: 12px; }
 
 .footerbottom {
@@ -645,75 +648,91 @@ a {
   margin: 0;
   background: #000; }
 
-.footer .subscribe {
-  display: block;
-  float: right;
-  margin-top: -32px;
-  margin-right: 12px;
-  font-size: 20px;
-  line-height: 28px; }
+    .footer .subscribe {
+      display: block;
+      float: right;
+      margin-top: -32px;
+      margin-right: 12px;
+      font-size: 20px;
+      line-height: 28px; }
 
-.footer .footer-help {
-  background: #000;
-  font-size: 12px; }
+    .footer .footer-help {
+      background: #000;
+      font-size: 12px; }
 
-.footer .footer-help > div {
-  padding: 15px 0;
-  border-top: 1px solid #262626; }
+    .footer .footer-help > div {
+      padding: 15px 0;
+      border-top: 1px solid #262626; }
 
-.left8 {
-  float: left; }
+    .left8 {
+      float: left; }
 
-.footer .footer-help li {
-  width: 164px; }
+    .footer .footer-help li {
+      width: 164px; }
 
-.footer .footer-help p {
-  line-height: 24px; }
+    .footer .footer-help p {
+      line-height: 24px; }
 
-.footer .footer-help span {
-  color: #fff;
-  float: inherit; }
+    .footer .footer-help span {
+      color: #fff;
+      float: inherit; }
 
-.yoho-footer .footer-help p a {
-  color: #666; }
+    .yoho-footer .footer-help p a {
+      color: #666; }
 
-.footer {
-  box-sizing: border-box; }
+    .footer {
+      box-sizing: border-box; }
 
-.footer .footer-link {
-  background: #000;
-  padding: 10px 0 14px;
-  font-size: 12px; }
+    .footer .footer-link {
+      background: #000;
+      padding: 10px 0 14px;
+      font-size: 12px; }
 
-.footer .footer-link .about-us {
-  line-height: 20px;
-  color: #666;
-  padding-left: 92px;
-  position: relative; }
+    .footer .footer-link .about-us {
+      line-height: 20px;
+      color: #666;
+      padding-left: 92px;
+      position: relative; }
 
-.footer .footer-link .left-flag {
-  margin-top: -14px;
-  margin-left: -107px;
-  position: absolute; }
+    .footer .footer-link .left-flag {
+      margin-top: -14px;
+      margin-left: -107px;
+      position: absolute; }
 
-.footer .footer-link .left-flag .govicon {
-  float: left;
-  border-radius: 2px;
-  margin-right: 8px;
-  background: #fff;
-  width: 26px;
-  height: 34px; }
+    .footer .footer-link .left-flag .govicon {
+      float: left;
+      border-radius: 2px;
+      margin-right: 8px;
+      background: #fff;
+      width: 26px;
+      height: 34px; }
 
-.footer .footer-link .links {
-  word-break: keep-all; }
+    .footer .footer-link .links {
+      word-break: keep-all; }
 
-.footer .footer-link .about-us a {
-  color: #666; }
+    .footer .footer-link .about-us a {
+      color: #666; }
 
-.footer .footer-link .about-us a {
-  color: #666; }
+    .footer .footer-link .about-us a {
+      color: #666; }
 
-.links .h {
-  float: initial;
-  height: 55px;
-  margin-right: 4px; }
+    .links .h {
+      float: initial;
+      height: 55px;
+      margin-right: 4px; }
+    .right-floating{
+      position: fixed;
+      width: 60px;
+      left: 50%;
+      bottom: 20px;
+      margin-left: 595px;
+      z-index: 4;
+    }
+    .hover-box {
+      width: 71px;
+      position: relative;
+      left: -11px;
+      text-align: right;
+    }
+
+
