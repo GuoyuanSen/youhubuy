@@ -36,7 +36,7 @@ $.extend(WaterFall.prototype,{
             if(isNaN(height)) continue; 
             html += `  
             <dl class="biao clearfix" >
-                <a href="#"><img src="${json[i].image}" alt=""></a>
+                <a href="#"><img src="${json[i].image}" alt="" data-id="${i}"></a>
                 <dt>
         <p> <a href="#">"${json[i].title}"</a> </p>
             </dt>
@@ -44,7 +44,7 @@ $.extend(WaterFall.prototype,{
                 <p>
                 ¥259.00
                 </p>
-                
+                <button rel-data="${json[i].id}">加入购物车</button>
             </dd>
             </dl>
           `

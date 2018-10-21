@@ -500,7 +500,9 @@
       .xiaotu{
         position: absolute;
         top: 273px;
-        right: 859px;}
+        right: 859px;
+       width: 70px;
+      height: 90px;}
       .pull-right1{
         float:left;
       }

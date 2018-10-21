@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css"href="css/index.css"> 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <div id="yoho-header">
@@ -1346,8 +1347,26 @@ setInterval(oRight.onclick, 3000)
 
 
 </script>
+<script>
+  var oList = document.getElementById("wrap100");
+// 委托;
+// 详情页跳转
+oList.onclick = function(evt){
+    var e = evt || window.event;
+    var img = document.querySelectorAll("img");
+    var imgArray = Array.from(img);
+    var target = e.target || e.srcElement;
+ //    console.log(imgArray);   
+     if(imgArray.indexOf(target) != -1){
+         // 页面跳转;
+         // 先要储存cookie;
+         cookie("goodsId",target.getAttribute("data-id"));
+         location.href = "details.html";
+     }
+}
 
-
+</script>
+<script src="./js/gouwuche.js"></script>
 
   
   
