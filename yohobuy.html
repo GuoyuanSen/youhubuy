@@ -18,36 +18,34 @@
                 <a href="#">YOHO!BUY 有货</a>
                 <ul class="yoho-group-list">
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" data-en="YOHO!" data-cn="集团官网">YOHO!</a>
+                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!</span><span class="data-cn">集团官网</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" data-en="YOHO!BOYS" data-cn="男生潮流">YOHO!BOYS</a>
+                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!BOYS</span><span class="data-cn">男生潮流</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" data-en="YOHO!GIRLS" data-cn="女生潮流">YOHO!GIRLS</a>
+                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!GIRLS</span><span class="data-cn">女生潮流</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" data-en="Mars" data-cn="新鲜好去处">Mars</a>
+                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">Mars</span><span class="data-cn">新鲜好去处</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" data-en="YO'HOOD" data-cn="潮流嘉年华">YO'HOOD</a>
+                            <a href="#" class="yoho-group" rel="nofollow" ><span class="data-en">YO'HOOD</span><span class="data-cn">潮流嘉年华</span></a>
                         </li>
                 </ul>
             </div>
+            <script src="./script/libs/jquery.js"></script>
             <script>
-                    var one = document.getElementsByClassName('data-en'); 
-                    var two = document.getElementsByClassName('data-cn'); 
-                    var set = document.getElementsByClassName('yoho-group');
-                    set.onmouseenter = function (){
-                        two.style.display = "black"
-                        one.style.display = "none"
-                    }
-                    set.onmouseleave = function (){
-                        one.style.display = "none"
-                        two.style.display = "black"
-                    }
-
-                 </script>
+             $(".yoho-group").mouseenter(function(event){
+                 var target = event.target;
+                 $(target).find(".data-cn").css({
+                     display:"block"
+                 }).siblings(".data-en").css({
+                     display:"none"
+                 })
+             })
+            </script>
+            
             <div class="center">
                     <span class="iconfont icon-tanhao"></span>
                     <a href="#" rel="nofollow" target="_blank">
@@ -283,7 +281,7 @@
             <h5 class="code-title">下载手机客户端</h5>
             <i class="icon"><img src="./img/cc.jpg"></i>
     </div>
-    <script src="./script/libs/jquery.js"></script>
+   
   <script>
       
       //点击关闭
@@ -681,7 +679,7 @@
                 </li>
             </ul>
         </div>
-        <div id="wrap100">
+        <div id="wrap100" class="clearfix">
            
                 <!-- <dl class="biao clearfix">
                   <img src="https://img10.static.yhbimg.com/goodsimg/2018/09/06/11/01b47440c05151b3fb73477a3defcae41f.jpg?imageMogr2/thumbnail/280x373/background/d2hpdGU=/position/center/quality/90">
@@ -910,7 +908,7 @@
  <script src="./js/pubuliu.js"></script>
 </div>
 <!-- 底部                 -->
-<div class="footer">
+<div class="footer clearfix">
     <div class="footerbottom">
         <div class="promise">
            <div class="center-content clearfix">
@@ -1111,16 +1109,59 @@
     </div>
     <div class="right-floating">
         <div class="hover-box">
-            <a href="">
+            <a class="wang" href="#">
                 <img src="./img/weima1.png">
             </a>
+            <a class="wecha1" href="#">
+                <img src="./img/wechat1.png">
+            </a>
         </div>
-        <div class="layer-box return-top">
+        <div class="layer-box">
                 <span class="iconfont icon-lovetaoxin"></span>
         </div>
     </div>
 </div>             
-                
+ <!-- 顶部返回                -->
+ <script>
+
+        $(document).ready(function(){
+
+        $(".footer").hide();
+
+        $(function () {
+
+        $(window).scroll(function(){
+
+        if ($(window).scrollTop()>100){
+
+        $(".footer").fadeIn(500);
+
+        }
+
+        else
+
+        {
+
+        $(".footer").fadeOut(500);
+
+        }
+
+        });
+
+        $(".footer").click(function(){
+
+        $('body,html').animate({scrollTop:0},100);
+
+        return false;
+
+        });
+
+        });
+
+        });
+        
+        
+      </script>
       
 
 <script>

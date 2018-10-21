@@ -34,14 +34,19 @@ $.extend(WaterFall.prototype,{
 
             var height = json[i].height / (json[i].width / 220);
             if(isNaN(height)) continue; 
-            html += `  <ul class="clearfix style="height:${height}px">
-                            <img src="${json[i].image}" alt="">
-                            <p><a href="#">MLB WATCH 手表  灰色</a></p>
-                            <p> ¥259.00 </p>
-                    
-                   
-                       </ul>
-                    `
+            html += `  
+            <dl class="biao clearfix" >
+                <a href="http://localhost:8888/yohobuy.html"><img src="${json[i].image}" alt=""></a>
+                <dt>
+        <p> <a href="#">"${json[i].title}"</a> </p>
+            </dt>
+            <dd>
+                <p>
+                ¥259.00
+                </p>
+            </dd>
+            </dl>
+          `
         }
         this.main.html(this.main.html() + html);
         this.sortPage();
@@ -63,7 +68,7 @@ $.extend(WaterFall.prototype,{
                 // 最小值和最小值下标;
                 var minIndex = heightArray.indexOf(min);
                 aBox.eq(i).css({
-                    position:"absolute",
+                    // position:"absolute"不等高,
                     top:min,
                     // 最矮的那一个元素 , 获取到left值;
                     left:aBox.eq(minIndex).offset().left

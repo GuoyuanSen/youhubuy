@@ -34,6 +34,9 @@
   background-color: #f4f4f4;
   padding: 20px 0 20px 20px;
   z-index: 1000; }
+ 
+ 
+ 
 
 .left:hover {
   background-color: #dcdcdc; }
@@ -602,8 +605,7 @@ a {
 
 a {
   color: #333; }
-
-#wrap100 dl {
+#wrap100 .biao {
   width: 222px;
   height: 382px;
   float: left;
@@ -733,6 +735,36 @@ a {
       position: relative;
       left: -11px;
       text-align: right;
+      opacity: 0.5;
+      position: relative;
     }
-
+    .hover-box:hover{opacity: 1;}
+    .hover-box:hover .wecha1{
+      display: block
+    }
+    .wecha1{
+      position: absolute;
+      left: -265px;
+       top: -52px;
+       display: none;
+    }
+    .layer-box {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 58px;
+      color: #fff;
+      background: #000;
+      opacity: .5;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-left: -10px;
+  }
+  .layer-box:hover{
+    opacity: 1;
+  }
+  .layer-box span{
+    margin: 5px 0 0 16px;
+    font-size: 28px;
+  }
 
