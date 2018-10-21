@@ -36,7 +36,7 @@ $.extend(WaterFall.prototype,{
             if(isNaN(height)) continue; 
             html += `  
             <dl class="biao clearfix" >
-                <a href="http://localhost:8888/yohobuy.html"><img src="${json[i].image}" alt=""></a>
+                <a href="#"><img src="${json[i].image}" alt=""></a>
                 <dt>
         <p> <a href="#">"${json[i].title}"</a> </p>
             </dt>
@@ -44,6 +44,7 @@ $.extend(WaterFall.prototype,{
                 <p>
                 ¥259.00
                 </p>
+                
             </dd>
             </dl>
           `

@@ -18,32 +18,86 @@
                 <a href="#">YOHO!BUY 有货</a>
                 <ul class="yoho-group-list">
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!</span><span class="data-cn">集团官网</span></a>
+                            <a href="#" class="yoho-group yoho-group1" rel="nofollow"><span class=" data-en">YOHO!</span><span class=" data-cn">集团官网</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!BOYS</span><span class="data-cn">男生潮流</span></a>
+                            <a href="#" class="yoho-group yoho-group2" rel="nofollow"><span class=" data-en">YOHO!BOYS</span><span class=" data-cn">男生潮流</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">YOHO!GIRLS</span><span class="data-cn">女生潮流</span></a>
+                            <a href="#" class="yoho-group yoho-group3" rel="nofollow"><span class="data-en">YOHO!GIRLS</span><span class="data-cn">女生潮流</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow"><span class="data-en">Mars</span><span class="data-cn">新鲜好去处</span></a>
+                            <a href="#" class="yoho-group yoho-group4" rel="nofollow"><span class="data-en">Mars</span><span class="data-cn">新鲜好去处</span></a>
                         </li>
                         <li>
-                            <a href="#" class="yoho-group" rel="nofollow" ><span class="data-en">YO'HOOD</span><span class="data-cn">潮流嘉年华</span></a>
+                            <a href="#" class="yoho-group yoho-group5" rel="nofollow" ><span class="data-en">YO'HOOD</span><span class="data-cn">潮流嘉年华</span></a>
                         </li>
                 </ul>
             </div>
             <script src="./script/libs/jquery.js"></script>
             <script>
-             $(".yoho-group").mouseenter(function(event){
-                 var target = event.target;
-                 $(target).find(".data-cn").css({
-                     display:"block"
-                 }).siblings(".data-en").css({
-                     display:"none"
-                 })
-             })
+                 $(".yoho-group .data-cn").hide()
+                $(".yoho-group1").on("mouseenter",function(){
+                    $(".yoho-group1 .data-cn").show();
+                    $(".yoho-group1 .data-en").hide();
+                  
+                })
+                $(".yoho-group1").on("mouseleave",function(){
+                    $(".yoho-group1 .data-en").show();
+                    $(".yoho-group1 .data-cn").hide()
+                })
+                $(".yoho-group2").on("mouseenter",function(){
+                    $(".yoho-group2 .data-cn").show();
+                    $(".yoho-group2 .data-en").hide();
+                  
+                })
+                $(".yoho-group2").on("mouseleave",function(){
+                    $(".yoho-group2 .data-en").show();
+                    $(".yoho-group2 .data-cn").hide()
+                })
+                $(".yoho-group3").on("mouseenter",function(){
+                    $(".yoho-group3 .data-cn").show();
+                    $(".yoho-group3 .data-en").hide();
+                  
+                })
+                $(".yoho-group3").on("mouseleave",function(){
+                    $(".yoho-group3 .data-en").show();
+                    $(".yoho-group3 .data-cn").hide()
+                })
+                $(".yoho-group4").on("mouseenter",function(){
+                    $(".yoho-group4 .data-cn").show();
+                    $(".yoho-group4 .data-en").hide();
+                  
+                })
+                $(".yoho-group4").on("mouseleave",function(){
+                    $(".yoho-group4 .data-en").show();
+                    $(".yoho-group4 .data-cn").hide()
+                })
+                $(".yoho-group5").on("mouseenter",function(){
+                    $(".yoho-group5 .data-cn").show();
+                    $(".yoho-group5 .data-en").hide();
+                  
+                })
+                $(".yoho-group5").on("mouseleave",function(){
+                    $(".yoho-group5 .data-en").show();
+                    $(".yoho-group5 .data-cn").hide()
+                })
+            //  $(".yoho-group").mouseenter(function(event){
+            //      var target = event.target;
+            //      $(target).find(".data-cn").css({
+            //          display:"block"
+            //      }).siblings(".data-en").css({
+            //          display:"none"
+            //      })
+            //  })
+            //  $(".yoho-group").mouseleave(function(event){
+            //      var target = event.target;
+            //      $(target).css({
+            //          display:"none"
+            //      }).siblings(".data-en").css({
+            //          display:"block"
+            //      })
+            //  })
             </script>
             
             <div class="center">
@@ -689,6 +743,7 @@
                  <dd>
                     <p>
                      ¥259.00
+
                     </p>
                  </dd>
                 </dl>

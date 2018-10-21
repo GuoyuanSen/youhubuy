@@ -35,6 +35,20 @@
     padding: 20px 0 20px 20px;
     z-index: 1000; }
   
+  .yoho-group{
+    position: relative;
+    display: block;
+    height: 33px;
+    width: 170px;
+  } 
+  .data-en{
+    position: absolute;left: 0;top: 0;
+    display: block
+  } 
+  .data-cn{
+    position: absolute;left: 0;top: 0;
+    /* display: none; */
+  }
   .left:hover {
     background-color: #dcdcdc; }
   
@@ -627,6 +641,32 @@ a {
   border: 1px solid #222;
   text-align: center;
 }
+.num-wraper{
+  margin-top: 10px;
+  position: relative;
+}
+.minus-plus {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #b0b0b0;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.num{
+  display: block;
+  width: 50px;
+  height: 25px;
+  line-height: 27px;
+  text-align: center;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 12px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
   .line3{
   height: 21px;
   width: 606px;

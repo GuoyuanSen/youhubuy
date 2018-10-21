@@ -34,7 +34,11 @@
   background-color: #f4f4f4;
   padding: 20px 0 20px 20px;
   z-index: 1000; }
- 
+  .yoho-group-list .yoho-group span{
+    height: 33px;
+    width: 170px;
+  }
+     
  
  
 
@@ -617,11 +621,19 @@ a {
 
 #wrap100 p {
   text-align: center;
-  margin-top: 8px; }
+  margin-top: 8px;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
 
-#wrap100 .biao:hover {
-  opacity: 0.7; }
-
+#wrap100 img:hover {
+  opacity:0.7; }
+#wrap100 .gogo{
+  width: 14px;
+  height: 14px;display: block;
+}
 .footer {
   width: 100%;
   font-size: 12px; }
