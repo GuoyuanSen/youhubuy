@@ -34,6 +34,20 @@
                         </li>
                 </ul>
             </div>
+            <script>
+                    var one = document.getElementsByClassName('data-en'); 
+                    var two = document.getElementsByClassName('data-cn'); 
+                    var set = document.getElementsByClassName('yoho-group');
+                    set.onmouseenter = function (){
+                        two.style.display = "black"
+                        one.style.display = "none"
+                    }
+                    set.onmouseleave = function (){
+                        one.style.display = "none"
+                        two.style.display = "black"
+                    }
+
+                 </script>
             <div class="center">
                     <span class="iconfont icon-tanhao"></span>
                     <a href="#" rel="nofollow" target="_blank">
@@ -140,6 +154,7 @@
                                 <a href="#">LIFE STYLE</a>
                             </h5>
                     </li>
+           
             </ul> 
             <div class="search">
                 <div class="search-s">

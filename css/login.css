@@ -42,17 +42,18 @@ section .zuo{
 section .zuo img{
     width: 252px;
     height: 190px;
-    margin: 121px;
+    margin: 112px;
 }
 section .you{
     width: 400px;
-    padding: 65px 20px;
+    padding: 46px 20px;
     float: left;
     position: relative;
 }
 section .you h2{
     color: #5e5e5e;
     float: left;
+    margin-top: -10px;
 }
 section .you .hai{
     float: left;
@@ -62,14 +63,14 @@ section .you .hai{
 }
 section .you a{
     color: #0083ce;
-    margin-top: 5px;
+    margin-top:-16px;
     float: left;
 }
 #username{
     width: 298px;
     height: 38px;
     border: 1px solid #e6e6e6;
-    margin-top: 20px;
+    margin-top: 34px;
     padding-left: 40px;
 }
 .name{
