@@ -44,7 +44,7 @@ $.extend(WaterFall.prototype,{
                 <p>
                 ¥259.00
                 </p>
-                <button rel-data="${json[i].id}">加入购物车</button>
+                <button rel-id="${json[i].id}">加入购物车</button>
             </dd>
             </dl>
           `

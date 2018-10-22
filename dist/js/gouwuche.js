@@ -1,18 +1,18 @@
 function ShopCar(){}
 $.extend(ShopCar.prototype,{
     init:function(){
-        this.main = $("#today_now_goods")
+        this.main = $("#wrap100")
         this.loadJson()
         .done(function(res){
             this.addData(res);;
         })
         this.bindEvent();
-        this.listSum();
-        // console.log($(".car_box>div"));
+        // this.listSum();
+        // console.log($(".go-cart span"));
     },
     loadJson:function(){
         var opt = {
-            url:"https://list.mogujie.com/search",
+            url:"http://www.wookmark.com/api/json/popular",
             dataType:"jsonp",
             data:{page:this.page},
             context:this
@@ -20,27 +20,27 @@ $.extend(ShopCar.prototype,{
         return $.ajax(opt);
     },
     bindEvent:function(){
-        $("#today_now_goods").on("click","button",this.addCar.bind(this));
-        $(".car_box").on("mouseenter",this.showList.bind(this));
-        $(".car_box>div").on("mouseleave",function(){
-            $(".goods_list").children().remove();
+        $("#wrap100").on("click","button",this.addCar.bind(this));
+        $(".go-cart").on("mouseenter",this.showList.bind(this));
+        $(".go-cart span").on("mouseleave",function(){
+            $(".cart-wrapper").children().remove();
         });
-        $(".car_box>div").on("click",function(event){
+        $(".go-cart span").on("click",function(event){
             var target = event.target ; 
-            if(target != $(".car_box>div")[0]) return 0;
+            if(target != $(".go-cart span")[0]) return 0;
 
             $.removeCookie("shopCar");
             // 执行鼠标移出事件;
-            $(".car_box>div").triggerHandler("mouseleave");
+            $(".go-cart span").triggerHandler("mouseleave");
             this.listSum();
         }.bind(this));
-        $(".car_box>div").on("click",function(){
+        $(".go-cart span").on("click",function(){
             location.href = "gouwuche.html";
         })
         
     },
-    addData:function(json1){
-        this.json=json1.result.wall.list;
+    addData:function(json){
+        this.json=json;
         //console.log(this.json)
     },
     addCar:function(event){
@@ -52,9 +52,9 @@ $.extend(ShopCar.prototype,{
         //console.log($.cookie("shopCar"))
         if((cookie = $.cookie("shopCar"))){
             var cookieArray = JSON.parse(cookie);
-            // console.log(cookieArray,cookieArray.length);
+            console.log(cookieArray,cookieArray.length);
             for(var i = 0 ; i < cookieArray.length ; i ++){
-                if(cookieArray[i].iid == goodsId ) {
+                if(cookieArray[i].id == goodsId ) {
                     hasGoods = true;
                     cookieArray[i].num ++;
                     break;
@@ -63,23 +63,23 @@ $.extend(ShopCar.prototype,{
             }
             if(hasGoods == false){
                 var goods = {
-                    iid : goodsId,
+                    id : goodsId,
                     num : "1"
                 }
                 cookieArray.push(goods);
             }
             $.cookie("shopCar",JSON.stringify(cookieArray));
         }else{
-            $.cookie("shopCar",`[{"iid":"${goodsId}","num":"1"}]`);
+            $.cookie("shopCar",`[{"id":"${goodsId}","num":"1"}]`);
         }
         //console.log($.cookie("shopCar"));
-        this.listSum();
+        // this.listSum();
     }
     ,
     showList:function(event){
         var target = event.target;
-        if(target != $(".car_box>div")[0]) return 0;
-        //console.log($(".car_box>div"));
+        if(target != $(".go-cart span")[0]) return 0;
+        //console.log($(".go-cart>div"));
         var cookie;
         if(!(cookie = $.cookie("shopCar"))){ return 0; };
         var cookieArray = JSON.parse(cookie);
@@ -88,29 +88,17 @@ $.extend(ShopCar.prototype,{
         for(var i = 0 ; i < cookieArray.length ; i ++){
             //console.log(this.json)
             for(var j = 0 ; j < this.json.length ; j ++){
-                if(cookieArray[i].iid == this.json[j].iid){
+                console.log(cookieArray[i].id ,this.json[j].id)
+                if(cookieArray[i].id == this.json[j].id){
                     html += `
-                    <li class="btn_cart">
-                        <div class="cart_con_over cart_con_single">
-                            <div class="single_pic">
-                                <a href="javascript:void(0)">
-                                    <img src="${this.json[j].show.img}">
-                                </a>
-                            </div>
-                            <div class="single_info">
-                                <a href="javascript:void(0)" class="name">${this.json[j].title}</a>
-                                <span class="price">${this.json[j].price}</span>
-                                <span class="price_plus"> x </span>
-                                <span class="price_num">${cookieArray[i].num}</span>
-                            </div>
-                        </div>
+                   <img src="${json[i].image}" alt="">
                             `;
                     break;
                 }
             }
         }
         // $("#car_wrap")[0].style.cssText = 'display:block; z-index:4  ' 
-        $(".goods_list").html(html);
+        $(".cart-wrapper").html(html);
     }
     // listSum:function(){
     //     var cookie;
